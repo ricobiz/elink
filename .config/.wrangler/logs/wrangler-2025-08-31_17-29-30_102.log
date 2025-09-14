@@ -1,0 +1,162 @@
+
+--- 2025-08-31T17:29:30.367Z debug
+🪵  Writing logs to "/home/runner/workspace/.config/.wrangler/logs/wrangler-2025-08-31_17-29-30_102.log"
+---
+
+--- 2025-08-31T17:29:30.367Z debug
+Metrics dispatcher: Posting data {"deviceId":"68948afc-595c-4c4d-8e12-41e719670161","event":"wrangler command started","timestamp":1756661370367,"properties":{"amplitude_session_id":1756661370364,"amplitude_event_id":0,"wranglerVersion":"4.33.1","osPlatform":"Linux","osVersion":"#1-NixOS SMP PREEMPT_DYNAMIC Tue Jan  1 00:00:00 UTC 1980","nodeVersion":20,"packageManager":"npm","isFirstUsage":false,"configFileType":"toml","isCI":false,"isPagesCI":false,"isWorkersCI":false,"isInteractive":false,"hasAssets":false,"argsUsed":[],"argsCombination":"","command":"wrangler whoami","args":{}}}
+---
+
+--- 2025-08-31T17:29:30.384Z debug
+.env file not found at "/home/runner/workspace/.env". Continuing... For more details, refer to https://developers.cloudflare.com/workers/wrangler/system-environment-variables/
+---
+
+--- 2025-08-31T17:29:30.384Z debug
+.env file not found at "/home/runner/workspace/.env.local". Continuing... For more details, refer to https://developers.cloudflare.com/workers/wrangler/system-environment-variables/
+---
+
+--- 2025-08-31T17:29:30.441Z log
+
+ ⛅️ wrangler 4.33.1
+───────────────────
+---
+
+--- 2025-08-31T17:29:30.452Z log
+Getting User settings...
+---
+
+--- 2025-08-31T17:29:30.453Z debug
+-- START CF API REQUEST: GET https://api.cloudflare.com/client/v4/user/tokens/verify
+---
+
+--- 2025-08-31T17:29:30.453Z debug
+QUERY STRING: omitted; set WRANGLER_LOG_SANITIZE=false to include sanitized data
+---
+
+--- 2025-08-31T17:29:30.454Z debug
+HEADERS: omitted; set WRANGLER_LOG_SANITIZE=false to include sanitized data
+---
+
+--- 2025-08-31T17:29:30.454Z debug
+INIT: omitted; set WRANGLER_LOG_SANITIZE=false to include sanitized data
+---
+
+--- 2025-08-31T17:29:30.454Z debug
+-- END CF API REQUEST
+---
+
+--- 2025-08-31T17:29:30.678Z debug
+-- START CF API RESPONSE: Unauthorized 401
+---
+
+--- 2025-08-31T17:29:30.679Z debug
+HEADERS: omitted; set WRANGLER_LOG_SANITIZE=false to include sanitized data
+---
+
+--- 2025-08-31T17:29:30.679Z debug
+RESPONSE: omitted; set WRANGLER_LOG_SANITIZE=false to include sanitized data
+---
+
+--- 2025-08-31T17:29:30.679Z debug
+-- END CF API RESPONSE
+---
+
+--- 2025-08-31T17:29:30.681Z debug
+-- START CF API REQUEST: GET https://api.cloudflare.com/client/v4/user
+---
+
+--- 2025-08-31T17:29:30.681Z debug
+QUERY STRING: omitted; set WRANGLER_LOG_SANITIZE=false to include sanitized data
+---
+
+--- 2025-08-31T17:29:30.681Z debug
+HEADERS: omitted; set WRANGLER_LOG_SANITIZE=false to include sanitized data
+---
+
+--- 2025-08-31T17:29:30.681Z debug
+INIT: omitted; set WRANGLER_LOG_SANITIZE=false to include sanitized data
+---
+
+--- 2025-08-31T17:29:30.681Z debug
+-- END CF API REQUEST
+---
+
+--- 2025-08-31T17:29:30.904Z debug
+-- START CF API RESPONSE: Forbidden 403
+---
+
+--- 2025-08-31T17:29:30.905Z debug
+HEADERS: omitted; set WRANGLER_LOG_SANITIZE=false to include sanitized data
+---
+
+--- 2025-08-31T17:29:30.905Z debug
+RESPONSE: omitted; set WRANGLER_LOG_SANITIZE=false to include sanitized data
+---
+
+--- 2025-08-31T17:29:30.905Z debug
+-- END CF API RESPONSE
+---
+
+--- 2025-08-31T17:29:30.906Z debug
+-- START CF API REQUEST: GET https://api.cloudflare.com/client/v4/accounts
+---
+
+--- 2025-08-31T17:29:30.906Z debug
+QUERY STRING: omitted; set WRANGLER_LOG_SANITIZE=false to include sanitized data
+---
+
+--- 2025-08-31T17:29:30.906Z debug
+HEADERS: omitted; set WRANGLER_LOG_SANITIZE=false to include sanitized data
+---
+
+--- 2025-08-31T17:29:30.910Z debug
+INIT: omitted; set WRANGLER_LOG_SANITIZE=false to include sanitized data
+---
+
+--- 2025-08-31T17:29:30.910Z debug
+-- END CF API REQUEST
+---
+
+--- 2025-08-31T17:29:31.129Z debug
+-- START CF API RESPONSE: OK 200
+---
+
+--- 2025-08-31T17:29:31.130Z debug
+HEADERS: omitted; set WRANGLER_LOG_SANITIZE=false to include sanitized data
+---
+
+--- 2025-08-31T17:29:31.130Z debug
+RESPONSE: omitted; set WRANGLER_LOG_SANITIZE=false to include sanitized data
+---
+
+--- 2025-08-31T17:29:31.130Z debug
+-- END CF API RESPONSE
+---
+
+--- 2025-08-31T17:29:31.131Z log
+👋 You are logged in with an Account API Token, associated with the account 5g7krbyjzb@privaterelay.appleid.com's Account.
+---
+
+--- 2025-08-31T17:29:31.131Z log
+ℹ️  The API Token is read from the CLOUDFLARE_API_TOKEN environment variable.
+---
+
+--- 2025-08-31T17:29:31.141Z log
+┌───────────────────────────────────────────────┬──────────────────────────────────┐
+│ Account Name                                  │ Account ID                       │
+├───────────────────────────────────────────────┼──────────────────────────────────┤
+│ 5g7krbyjzb@privaterelay.appleid.com's Account │ 9d8066290d8480a0f2572ee9b094db9d │
+└───────────────────────────────────────────────┴──────────────────────────────────┘
+---
+
+--- 2025-08-31T17:29:31.142Z log
+🔓 To see token permissions visit https://dash.cloudflare.com/9d8066290d8480a0f2572ee9b094db9d/api-tokens.
+---
+
+--- 2025-08-31T17:29:31.143Z debug
+Metrics dispatcher: Posting data {"deviceId":"68948afc-595c-4c4d-8e12-41e719670161","event":"view accounts","timestamp":1756661371143,"properties":{"category":"Workers","wranglerVersion":"4.33.1","os":"linux:x64"}}
+---
+
+--- 2025-08-31T17:29:31.147Z debug
+Metrics dispatcher: Posting data {"deviceId":"68948afc-595c-4c4d-8e12-41e719670161","event":"wrangler command completed","timestamp":1756661371146,"properties":{"amplitude_session_id":1756661370364,"amplitude_event_id":1,"wranglerVersion":"4.33.1","osPlatform":"Linux","osVersion":"#1-NixOS SMP PREEMPT_DYNAMIC Tue Jan  1 00:00:00 UTC 1980","nodeVersion":20,"packageManager":"npm","isFirstUsage":false,"configFileType":"toml","isCI":false,"isPagesCI":false,"isWorkersCI":false,"isInteractive":false,"hasAssets":false,"argsUsed":[],"argsCombination":"","command":"wrangler whoami","args":{},"durationMs":807,"durationSeconds":0.807,"durationMinutes":0.01345}}
+---

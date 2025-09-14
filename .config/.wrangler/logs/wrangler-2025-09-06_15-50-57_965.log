@@ -1,0 +1,84 @@
+
+--- 2025-09-06T15:50:58.156Z debug
+🪵  Writing logs to "/home/runner/workspace/.config/.wrangler/logs/wrangler-2025-09-06_15-50-57_965.log"
+---
+
+--- 2025-09-06T15:50:58.156Z debug
+Metrics dispatcher: Posting data {"deviceId":"68948afc-595c-4c4d-8e12-41e719670161","event":"wrangler command started","timestamp":1757173858155,"properties":{"amplitude_session_id":1757173858153,"amplitude_event_id":0,"wranglerVersion":"4.33.1","osPlatform":"Linux","osVersion":"#1-NixOS SMP PREEMPT_DYNAMIC Tue Jan  1 00:00:00 UTC 1980","nodeVersion":20,"packageManager":"npm","isFirstUsage":false,"configFileType":"toml","isCI":false,"isPagesCI":false,"isWorkersCI":false,"isInteractive":false,"hasAssets":false,"argsUsed":[],"argsCombination":"","command":"wrangler whoami","args":{}}}
+---
+
+--- 2025-09-06T15:50:58.175Z debug
+.env file not found at "/home/runner/workspace/.env". Continuing... For more details, refer to https://developers.cloudflare.com/workers/wrangler/system-environment-variables/
+---
+
+--- 2025-09-06T15:50:58.175Z debug
+.env file not found at "/home/runner/workspace/.env.local". Continuing... For more details, refer to https://developers.cloudflare.com/workers/wrangler/system-environment-variables/
+---
+
+--- 2025-09-06T15:50:58.330Z log
+
+ ⛅️ wrangler 4.33.1 (update available 4.34.0)
+─────────────────────────────────────────────
+---
+
+--- 2025-09-06T15:50:58.344Z log
+Getting User settings...
+---
+
+--- 2025-09-06T15:50:58.347Z debug
+-- START CF API REQUEST: GET https://api.cloudflare.com/client/v4/user/tokens/verify
+---
+
+--- 2025-09-06T15:50:58.347Z debug
+QUERY STRING: omitted; set WRANGLER_LOG_SANITIZE=false to include sanitized data
+---
+
+--- 2025-09-06T15:50:58.347Z debug
+HEADERS: omitted; set WRANGLER_LOG_SANITIZE=false to include sanitized data
+---
+
+--- 2025-09-06T15:50:58.347Z debug
+INIT: omitted; set WRANGLER_LOG_SANITIZE=false to include sanitized data
+---
+
+--- 2025-09-06T15:50:58.347Z debug
+-- END CF API REQUEST
+---
+
+--- 2025-09-06T15:50:58.584Z debug
+-- START CF API RESPONSE: Bad Request 400
+---
+
+--- 2025-09-06T15:50:58.586Z debug
+HEADERS: omitted; set WRANGLER_LOG_SANITIZE=false to include sanitized data
+---
+
+--- 2025-09-06T15:50:58.586Z debug
+RESPONSE: omitted; set WRANGLER_LOG_SANITIZE=false to include sanitized data
+---
+
+--- 2025-09-06T15:50:58.586Z debug
+-- END CF API RESPONSE
+---
+
+--- 2025-09-06T15:50:58.588Z log
+
+---
+
+--- 2025-09-06T15:50:58.664Z log
+✘ [ERROR] A request to the Cloudflare API (/user/tokens/verify) failed.
+
+  Invalid request headers [code: 6003]
+  
+  - Invalid format for Authorization header [code: 6111]
+
+  
+  If you think this is a bug, please open an issue at:
+  https://github.com/cloudflare/workers-sdk/issues/new/choose
+
+
+---
+
+--- 2025-09-06T15:50:58.665Z debug
+Metrics dispatcher: Posting data {"deviceId":"68948afc-595c-4c4d-8e12-41e719670161","event":"wrangler command errored","timestamp":1757173858665,"properties":{"amplitude_session_id":1757173858153,"amplitude_event_id":1,"wranglerVersion":"4.33.1","osPlatform":"Linux","osVersion":"#1-NixOS SMP PREEMPT_DYNAMIC Tue Jan  1 00:00:00 UTC 1980","nodeVersion":20,"packageManager":"npm","isFirstUsage":false,"configFileType":"toml","isCI":false,"isPagesCI":false,"isWorkersCI":false,"isInteractive":false,"hasAssets":false,"argsUsed":[],"argsCombination":"","command":"wrangler whoami","args":{},"durationMs":540,"durationSeconds":0.54,"durationMinutes":0.009000000000000001,"errorType":"APIError"}}
+---

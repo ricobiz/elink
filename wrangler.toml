@@ -1,0 +1,35 @@
+name = "eiroslink"
+main = "worker.js"
+compatibility_date = "2024-08-31"
+workers_dev = true
+
+[vars]
+SERVICE_NAME      = "eiroslink"
+SERVICE_VERSION   = "v3.9.1"
+PROXY_ORIGIN      = "https://react-node-cloudflare-gq2tdbfmg2.replit.app"
+RL_BUCKET_PER_MIN = "120"
+CORS_ALLOW_ORIGIN = "https://eiroslink.com, https://eiros.link, https://react-node-cloudflare-gq2tdbfmg2.replit.app"
+
+# KV namespace (binding ДОЛЖЕН называться BOARD, т.к. в коде env.BOARD)
+kv_namespaces = [
+  { binding = "BOARD", id = "1f40074011ea4ba9836f909b0bb07f79" }
+]
+
+# Durable Object: binding EIROSSID -> класс EirosSid
+[durable_objects]
+bindings = [
+  { name = "EIROSSID", class_name = "EirosSid" }
+]
+
+# ОБЯЗАТЕЛЬНО: миграция, чтобы класс появился и в выпадашке в Bindings
+[[migrations]]
+tag = "v1"
+new_classes = ["EirosSid"]
+
+# Доменные роуты (включай, только если зоны подключены)
+[[routes]]
+pattern = "eiroslink.com/*"
+zone_name = "eiroslink.com"
+[[routes]]
+pattern = "eiros.link/*"
+zone_name = "eiros.link"

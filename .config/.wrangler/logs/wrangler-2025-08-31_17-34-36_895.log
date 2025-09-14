@@ -1,0 +1,22 @@
+
+--- 2025-08-31T17:34:37.134Z debug
+🪵  Writing logs to "/home/runner/workspace/.config/.wrangler/logs/wrangler-2025-08-31_17-34-36_895.log"
+---
+
+--- 2025-08-31T17:34:37.134Z debug
+Metrics dispatcher: Posting data {"deviceId":"68948afc-595c-4c4d-8e12-41e719670161","event":"wrangler command started","timestamp":1756661677134,"properties":{"amplitude_session_id":1756661677131,"amplitude_event_id":0,"wranglerVersion":"4.33.1","osPlatform":"Linux","osVersion":"#1-NixOS SMP PREEMPT_DYNAMIC Tue Jan  1 00:00:00 UTC 1980","nodeVersion":20,"packageManager":"npm","isFirstUsage":false,"configFileType":"toml","isCI":false,"isPagesCI":false,"isWorkersCI":false,"isInteractive":false,"hasAssets":false,"argsUsed":["scopedKey"],"argsCombination":"scopedKey","command":"wrangler login","args":{"scopedKey":"<REDACTED>","browser":true,"callbackHost":"<REDACTED>","callbackPort":8976}}}
+---
+
+--- 2025-08-31T17:34:37.152Z log
+
+---
+
+--- 2025-08-31T17:34:37.254Z error
+✘ [ERROR] Unknown arguments: scoped-key, scopedKey
+
+
+---
+
+--- 2025-08-31T17:34:37.304Z debug
+Metrics dispatcher: Posting data {"deviceId":"68948afc-595c-4c4d-8e12-41e719670161","event":"wrangler command errored","timestamp":1756661677304,"properties":{"amplitude_session_id":1756661677131,"amplitude_event_id":1,"wranglerVersion":"4.33.1","osPlatform":"Linux","osVersion":"#1-NixOS SMP PREEMPT_DYNAMIC Tue Jan  1 00:00:00 UTC 1980","nodeVersion":20,"packageManager":"npm","isFirstUsage":false,"configFileType":"toml","isCI":false,"isPagesCI":false,"isWorkersCI":false,"isInteractive":false,"hasAssets":false,"argsUsed":["scopedKey"],"argsCombination":"scopedKey","command":"wrangler login","args":{"scopedKey":"<REDACTED>","browser":true,"callbackHost":"<REDACTED>","callbackPort":8976},"durationMs":200,"durationSeconds":0.2,"durationMinutes":0.0033333333333333335,"errorType":"CommandLineArgsError","errorMessage":"yargs validation error"}}
+---

@@ -1,0 +1,30 @@
+
+--- 2025-08-31T17:22:53.257Z debug
+🪵  Writing logs to "/home/runner/workspace/.config/.wrangler/logs/wrangler-2025-08-31_17-22-53_002.log"
+---
+
+--- 2025-08-31T17:22:53.257Z debug
+Metrics dispatcher: Posting data {"deviceId":"68948afc-595c-4c4d-8e12-41e719670161","event":"wrangler command started","timestamp":1756660973256,"properties":{"amplitude_session_id":1756660973254,"amplitude_event_id":0,"wranglerVersion":"4.33.1","osPlatform":"Linux","osVersion":"#1-NixOS SMP PREEMPT_DYNAMIC Tue Jan  1 00:00:00 UTC 1980","nodeVersion":20,"packageManager":"npm","isFirstUsage":false,"configFileType":"toml","isCI":false,"isPagesCI":false,"isWorkersCI":false,"isInteractive":false,"hasAssets":false,"argsUsed":["preview"],"argsCombination":"preview","command":"wrangler kv:namespace create EIROS_BOARD","args":{"preview":"<REDACTED>"}}}
+---
+
+--- 2025-08-31T17:22:53.272Z log
+
+---
+
+--- 2025-08-31T17:22:53.368Z error
+✘ [ERROR] Unknown arguments: preview, kv:namespace, create, EIROS_BOARD
+
+
+---
+
+--- 2025-08-31T17:22:53.388Z debug
+.env file not found at "/home/runner/workspace/.env". Continuing... For more details, refer to https://developers.cloudflare.com/workers/wrangler/system-environment-variables/
+---
+
+--- 2025-08-31T17:22:53.389Z debug
+.env file not found at "/home/runner/workspace/.env.local". Continuing... For more details, refer to https://developers.cloudflare.com/workers/wrangler/system-environment-variables/
+---
+
+--- 2025-08-31T17:22:53.426Z debug
+Metrics dispatcher: Posting data {"deviceId":"68948afc-595c-4c4d-8e12-41e719670161","event":"wrangler command errored","timestamp":1756660973426,"properties":{"amplitude_session_id":1756660973254,"amplitude_event_id":1,"wranglerVersion":"4.33.1","osPlatform":"Linux","osVersion":"#1-NixOS SMP PREEMPT_DYNAMIC Tue Jan  1 00:00:00 UTC 1980","nodeVersion":20,"packageManager":"npm","isFirstUsage":false,"configFileType":"toml","isCI":false,"isPagesCI":false,"isWorkersCI":false,"isInteractive":false,"hasAssets":false,"argsUsed":["preview"],"argsCombination":"preview","command":"wrangler kv:namespace create EIROS_BOARD","args":{"preview":"<REDACTED>"},"durationMs":195,"durationSeconds":0.195,"durationMinutes":0.0032500000000000003,"errorType":"CommandLineArgsError","errorMessage":"yargs validation error"}}
+---

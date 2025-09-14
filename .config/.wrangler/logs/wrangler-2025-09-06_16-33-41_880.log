@@ -1,0 +1,70 @@
+
+--- 2025-09-06T16:33:42.043Z debug
+🪵  Writing logs to "/home/runner/workspace/.config/.wrangler/logs/wrangler-2025-09-06_16-33-41_880.log"
+---
+
+--- 2025-09-06T16:33:42.042Z debug
+Metrics dispatcher: Posting data {"deviceId":"68948afc-595c-4c4d-8e12-41e719670161","event":"wrangler command started","timestamp":1757176422042,"properties":{"amplitude_session_id":1757176422040,"amplitude_event_id":0,"wranglerVersion":"4.33.1","osPlatform":"Linux","osVersion":"#1-NixOS SMP PREEMPT_DYNAMIC Tue Jan  1 00:00:00 UTC 1980","nodeVersion":20,"packageManager":"npm","isFirstUsage":false,"configFileType":"toml","isCI":false,"isPagesCI":false,"isWorkersCI":false,"isInteractive":false,"hasAssets":false,"argsUsed":["scopesList"],"argsCombination":"scopesList","command":"wrangler login","args":{"scopesList":true,"browser":true,"callbackHost":"<REDACTED>","callbackPort":8976}}}
+---
+
+--- 2025-09-06T16:33:42.055Z debug
+.env file not found at "/home/runner/workspace/.env". Continuing... For more details, refer to https://developers.cloudflare.com/workers/wrangler/system-environment-variables/
+---
+
+--- 2025-09-06T16:33:42.055Z debug
+.env file not found at "/home/runner/workspace/.env.local". Continuing... For more details, refer to https://developers.cloudflare.com/workers/wrangler/system-environment-variables/
+---
+
+--- 2025-09-06T16:33:42.123Z log
+
+ ⛅️ wrangler 4.33.1 (update available 4.34.0)
+─────────────────────────────────────────────
+---
+
+--- 2025-09-06T16:33:42.130Z log
+💁 Available scopes:
+---
+
+--- 2025-09-06T16:33:42.142Z log
+┌───────────────────────┬────────────────────────────────────────────────────────────────────────────────────────────────────┐
+│ Scope                 │ Description                                                                                        │
+├───────────────────────┼────────────────────────────────────────────────────────────────────────────────────────────────────┤
+│ account:read          │ See your account info such as account details, analytics, and memberships.                         │
+├───────────────────────┼────────────────────────────────────────────────────────────────────────────────────────────────────┤
+│ user:read             │ See your user info such as name, email address, and account memberships.                           │
+├───────────────────────┼────────────────────────────────────────────────────────────────────────────────────────────────────┤
+│ workers:write         │ See and change Cloudflare Workers data such as zones, KV storage, namespaces, scripts, and routes. │
+├───────────────────────┼────────────────────────────────────────────────────────────────────────────────────────────────────┤
+│ workers_kv:write      │ See and change Cloudflare Workers KV Storage data such as keys and namespaces.                     │
+├───────────────────────┼────────────────────────────────────────────────────────────────────────────────────────────────────┤
+│ workers_routes:write  │ See and change Cloudflare Workers data such as filters and routes.                                 │
+├───────────────────────┼────────────────────────────────────────────────────────────────────────────────────────────────────┤
+│ workers_scripts:write │ See and change Cloudflare Workers scripts, durable objects, subdomains, triggers, and tail data.   │
+├───────────────────────┼────────────────────────────────────────────────────────────────────────────────────────────────────┤
+│ workers_tail:read     │ See Cloudflare Workers tail and script data.                                                       │
+├───────────────────────┼────────────────────────────────────────────────────────────────────────────────────────────────────┤
+│ d1:write              │ See and change D1 Databases.                                                                       │
+├───────────────────────┼────────────────────────────────────────────────────────────────────────────────────────────────────┤
+│ pages:write           │ See and change Cloudflare Pages projects, settings and deployments.                                │
+├───────────────────────┼────────────────────────────────────────────────────────────────────────────────────────────────────┤
+│ zone:read             │ Grants read level access to account zone.                                                          │
+├───────────────────────┼────────────────────────────────────────────────────────────────────────────────────────────────────┤
+│ ssl_certs:write       │ See and manage mTLS certificates for your account                                                  │
+├───────────────────────┼────────────────────────────────────────────────────────────────────────────────────────────────────┤
+│ ai:write              │ See and change Workers AI catalog and assets                                                       │
+├───────────────────────┼────────────────────────────────────────────────────────────────────────────────────────────────────┤
+│ queues:write          │ See and change Cloudflare Queues settings and data                                                 │
+├───────────────────────┼────────────────────────────────────────────────────────────────────────────────────────────────────┤
+│ pipelines:write       │ See and change Cloudflare Pipelines configurations and data                                        │
+├───────────────────────┼────────────────────────────────────────────────────────────────────────────────────────────────────┤
+│ secrets_store:write   │ See and change secrets + stores within the Secrets Store                                           │
+├───────────────────────┼────────────────────────────────────────────────────────────────────────────────────────────────────┤
+│ containers:write      │ Manage Workers Containers                                                                          │
+├───────────────────────┼────────────────────────────────────────────────────────────────────────────────────────────────────┤
+│ cloudchamber:write    │ Manage Cloudchamber                                                                                │
+└───────────────────────┴────────────────────────────────────────────────────────────────────────────────────────────────────┘
+---
+
+--- 2025-09-06T16:33:42.144Z debug
+Metrics dispatcher: Posting data {"deviceId":"68948afc-595c-4c4d-8e12-41e719670161","event":"wrangler command completed","timestamp":1757176422144,"properties":{"amplitude_session_id":1757176422040,"amplitude_event_id":1,"wranglerVersion":"4.33.1","osPlatform":"Linux","osVersion":"#1-NixOS SMP PREEMPT_DYNAMIC Tue Jan  1 00:00:00 UTC 1980","nodeVersion":20,"packageManager":"npm","isFirstUsage":false,"configFileType":"toml","isCI":false,"isPagesCI":false,"isWorkersCI":false,"isInteractive":false,"hasAssets":false,"argsUsed":["scopesList"],"argsCombination":"scopesList","command":"wrangler login","args":{"scopesList":true,"browser":true,"callbackHost":"<REDACTED>","callbackPort":8976},"durationMs":123,"durationSeconds":0.123,"durationMinutes":0.00205}}
+---
