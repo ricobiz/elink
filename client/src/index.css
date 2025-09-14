@@ -1,0 +1,519 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Mobile Fixes - Safe Area & Viewport */
+* {
+  box-sizing: border-box;
+}
+
+html {
+  -webkit-text-size-adjust: 100%;
+  -ms-text-size-adjust: 100%;
+}
+
+body {
+  overscroll-behavior: none;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Dynamic Viewport Height Support */
+.h-dvh {
+  height: 100dvh;
+}
+
+.min-h-dvh {
+  min-height: 100dvh;
+}
+
+/* Safe Area Support */
+.pb-safe {
+  padding-bottom: env(safe-area-inset-bottom, 0px);
+}
+
+.pt-safe {
+  padding-top: env(safe-area-inset-top, 0px);
+}
+
+.pl-safe {
+  padding-left: env(safe-area-inset-left, 0px);
+}
+
+.pr-safe {
+  padding-right: env(safe-area-inset-right, 0px);
+}
+
+/* Mobile Typography - Prevent iOS Zoom */
+input,
+textarea,
+select {
+  font-size: 16px;
+}
+
+@media (min-width: 768px) {
+  input,
+  textarea,
+  select {
+    font-size: 14px;
+  }
+}
+
+/* Icon Size Constraints */
+svg {
+  max-width: 100%;
+  height: auto;
+}
+
+/* Button Overflow Fix */
+button {
+  overflow: hidden;
+}
+
+/* Text Wrapping in Messages */
+.message-content {
+  word-wrap: break-word;
+  overflow-wrap: anywhere;
+  hyphens: auto;
+  max-width: 100%;
+}
+
+.overflow-wrap-anywhere {
+  overflow-wrap: anywhere;
+}
+
+/* Keyboard Handling - Enhanced with VisualViewport API */
+:root {
+  --kb-height: 0px; /* Динамическая высота клавиатуры из JS */
+}
+
+/* Fixed bottom panel positioning without transforms to prevent containing block issues */
+.bottom-chat-panel {
+  position: fixed;
+  bottom: var(--kb-height, 0px);
+  left: 0;
+  right: 0;
+  z-index: 100;
+  transition: bottom 0.25s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  backdrop-filter: blur(8px);
+}
+
+/* Add padding to messages container to prevent overlap with elevated panel */
+.messages-container {
+  padding-bottom: calc(80px + var(--kb-height, 0px));
+  transition: padding-bottom 0.25s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+/* Mobile messages container needs more padding */
+@media (max-width: 768px) {
+  .messages-container {
+    padding-bottom: calc(96px + var(--kb-height, 0px));
+  }
+}
+
+/* Native keyboard inset support fallback */
+@supports (bottom: env(keyboard-inset-height, 0px)) {
+  .bottom-chat-panel {
+    bottom: max(var(--kb-height, 0px), env(keyboard-inset-height, 0px));
+  }
+}
+
+:root {
+  --radius: 8px;
+  --background: #0d1117;
+  --foreground: #e6edf3;
+  --card: #21262d;
+  --card-foreground: #e6edf3;
+  --muted: #30363d;
+  --muted-foreground: #7d8590;
+  --border: #30363d;
+  --input: #21262d;
+  --ring: #1f6feb;
+  --primary: #1f6feb;
+  --primary-foreground: #ffffff;
+  --secondary: #30363d;
+  --secondary-foreground: #e6edf3;
+  --destructive: #f85149;
+  --destructive-foreground: #ffffff;
+  --popover: #21262d;
+  --popover-foreground: #e6edf3;
+  --accent: #1f6feb;
+  --accent-foreground: #ffffff;
+  --warning: #f0883e;
+  --warning-foreground: #ffffff;
+  --success: #238636;
+  --success-foreground: #ffffff;
+}
+
+/* Базовые стили - НЕ используем !important чтобы не ломать макет */
+body {
+  background-color: var(--background);
+  color: var(--foreground);
+}
+
+/* Mobile keyboard protection */
+@supports (padding: env(keyboard-inset-height, 0px)) {
+  .keyboard-safe {
+    padding-bottom: env(keyboard-inset-height, 0px);
+  }
+}
+
+/* Enhanced keyboard behavior for improved UX - removed transform to prevent layout issues */
+
+/* Mobile keyboard protection - enhanced for new approach */
+.keyboard-safe {
+  padding-bottom: max(var(--kb-height, 0px), env(keyboard-inset-height, 0px));
+}
+
+/* Fixed Layout Helpers - for panels that need to avoid overlap */
+.fixed-top-panel {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 90;
+  backdrop-filter: blur(8px);
+}
+
+.fixed-bottom-panel {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 100;
+  backdrop-filter: blur(8px);
+}
+
+/* Chat specific layout fixes using dynamic viewport height */
+.chat-container {
+  height: calc(100dvh - 56px - 80px - var(--kb-height, 0px)); /* viewport minus panels and keyboard */
+  overflow-y: auto;
+  transition: height 0.25s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+@media (max-width: 768px) {
+  .chat-container {
+    height: calc(100dvh - 60px - 96px - var(--kb-height, 0px)); /* mobile panel heights */
+  }
+}
+
+/* Auto-scroll area that respects panel boundaries and keyboard */
+.messages-container {
+  scroll-padding-bottom: calc(100px + var(--kb-height, 0px)); /* ensure last message is visible above keyboard */
+  scroll-behavior: smooth;
+}
+
+/* Layout optimization for proper panel spacing with dynamic viewport */
+.main-content-area {
+  padding-top: calc(56px + env(safe-area-inset-top, 0px)); /* header height */
+  padding-bottom: calc(80px + var(--kb-height, 0px) + env(safe-area-inset-bottom, 0px)); /* bottom nav height + keyboard */
+  min-height: 100dvh;
+  overflow-y: auto;
+  transition: padding-bottom 0.25s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+@media (max-width: 768px) {
+  .main-content-area {
+    padding-top: calc(60px + env(safe-area-inset-top, 0px)); /* mobile header */
+    padding-bottom: calc(96px + var(--kb-height, 0px) + env(safe-area-inset-bottom, 0px)); /* mobile bottom nav + keyboard */
+  }
+}
+
+/* Mobile specific optimizations - removed transforms to prevent layout issues */
+@media screen and (max-width: 768px) {
+  /* Smooth scrolling adjustment for mobile */
+  [data-testid="input-chat-message"] {
+    scroll-margin-bottom: calc(100px + var(--kb-height, 0px));
+  }
+  
+  /* Mobile input container without transform */
+  .mobile-input-container {
+    position: relative;
+    z-index: 1000;
+    /* Removed transform to prevent containing block issues */
+  }
+  
+  /* Ensure input remains visible - use padding instead of transform */
+  .mobile-input-container:focus-within {
+    /* Focus styling without transform that breaks positioning */
+  }
+  
+  /* Prevent zoom on input focus on iOS */
+  input, textarea, select {
+    font-size: 16px;
+  }
+  
+  /* Better mobile textarea styling */
+  .mobile-input-container textarea {
+    width: 100%;
+    min-height: 44px; /* iOS recommended minimum touch target */
+    border-radius: 12px;
+    border: 1px solid var(--border);
+    background: var(--input);
+    color: var(--foreground);
+    padding: 12px 16px;
+    resize: none;
+    font-family: inherit;
+    line-height: 1.4;
+    box-sizing: border-box;
+  }
+  
+  .mobile-input-container textarea:focus {
+    outline: none;
+    border-color: var(--ring);
+    box-shadow: 0 0 0 2px rgba(31, 111, 235, 0.2);
+  }
+  
+  /* Accessibility improvements для send button */
+  [data-testid="button-send-message"] {
+    /* Минимальный размер touch target для accessibility */
+    min-width: 44px;
+    min-height: 44px;
+  }
+  
+  /* Улучшенный контраст для disabled состояния */
+  [data-testid="button-send-message"]:disabled {
+    opacity: 0.4;
+    cursor: not-allowed;
+  }
+  
+  /* Focus ring для keyboard navigation */
+  [data-testid="button-send-message"]:focus-visible {
+    outline: 2px solid var(--ring);
+    outline-offset: 2px;
+  }
+}
+
+/* Custom scrollbar for textarea (3-line limit) */
+[data-testid="input-chat-message"]::-webkit-scrollbar {
+  width: 4px;
+}
+
+[data-testid="input-chat-message"]::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+[data-testid="input-chat-message"]::-webkit-scrollbar-thumb {
+  background: var(--muted-foreground);
+  border-radius: 2px;
+  opacity: 0.5;
+}
+
+[data-testid="input-chat-message"]::-webkit-scrollbar-thumb:hover {
+  background: var(--foreground);
+  opacity: 0.8;
+}
+
+/* Triangle send button hover effect */
+[data-testid="button-send-message"] svg {
+  transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+[data-testid="button-send-message"]:hover svg {
+  transform: scale(1.1);
+}
+
+[data-testid="button-send-message"]:active svg {
+  transform: scale(0.95);
+}
+
+/* ===== Context Button Enhanced Styles ===== */
+
+/* Purple Color Variables */
+:root {
+  --ctx-purple-50: hsl(270, 100%, 98%);
+  --ctx-purple-100: hsl(269, 100%, 95%);
+  --ctx-purple-200: hsl(269, 100%, 92%);
+  --ctx-purple-300: hsl(269, 87%, 85%);
+  --ctx-purple-400: hsl(270, 95%, 75%);
+  --ctx-purple-500: hsl(270, 91%, 65%);
+  --ctx-purple-600: hsl(271, 81%, 56%);
+  --ctx-purple-700: hsl(272, 72%, 47%);
+  --ctx-purple-800: hsl(272, 67%, 39%);
+  --ctx-purple-900: hsl(273, 67%, 32%);
+  --ctx-purple-950: hsl(274, 87%, 21%);
+}
+
+.dark {
+  --ctx-purple-50: hsl(274, 87%, 21%);
+  --ctx-purple-100: hsl(273, 67%, 32%);
+  --ctx-purple-200: hsl(272, 67%, 39%);
+  --ctx-purple-300: hsl(272, 72%, 47%);
+  --ctx-purple-400: hsl(271, 81%, 56%);
+  --ctx-purple-500: hsl(270, 91%, 65%);
+  --ctx-purple-600: hsl(270, 95%, 75%);
+  --ctx-purple-700: hsl(269, 87%, 85%);
+  --ctx-purple-800: hsl(269, 100%, 92%);
+  --ctx-purple-900: hsl(269, 100%, 95%);
+  --ctx-purple-950: hsl(270, 100%, 98%);
+}
+
+/* Context Button Specific Styles */
+[data-testid="button-context"] {
+  /* Enhanced transitions */
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  /* Better touch targets */
+  min-width: 48px;
+  min-height: 36px;
+  /* Typography for 'ctx' */
+  font-family: 'Outfit', ui-monospace, SFMono-Regular, 'Cascadia Code', 'Roboto Mono', Consolas, 'Courier New', monospace;
+  letter-spacing: 0.05em;
+  font-weight: 600;
+  text-transform: lowercase;
+}
+
+/* Inactive State Styling */
+[data-testid="button-context"]:not(.ctx-active):not(:disabled) {
+  background: var(--ctx-purple-100);
+  color: var(--ctx-purple-700);
+  border: 1px solid var(--ctx-purple-300);
+}
+
+[data-testid="button-context"]:not(.ctx-active):not(:disabled):hover {
+  background: var(--ctx-purple-200);
+  color: var(--ctx-purple-800);
+  border-color: var(--ctx-purple-400);
+  transform: translateY(-1px);
+  box-shadow: 0 4px 12px -2px rgba(147, 51, 234, 0.25);
+}
+
+/* Active State with Enhanced Glow */
+[data-testid="button-context"].ctx-active {
+  background: linear-gradient(135deg, var(--ctx-purple-500), var(--ctx-purple-600));
+  color: white;
+  border: 1px solid var(--ctx-purple-400);
+  box-shadow: 
+    0 0 0 1px rgba(147, 51, 234, 0.3),
+    0 4px 12px -2px rgba(147, 51, 234, 0.4),
+    0 0 20px -5px rgba(147, 51, 234, 0.3);
+}
+
+[data-testid="button-context"].ctx-active:hover {
+  background: linear-gradient(135deg, var(--ctx-purple-600), var(--ctx-purple-700));
+  transform: translateY(-1px);
+  box-shadow: 
+    0 0 0 1px rgba(147, 51, 234, 0.4),
+    0 6px 16px -4px rgba(147, 51, 234, 0.5),
+    0 0 24px -6px rgba(147, 51, 234, 0.4);
+}
+
+/* Pressed State Animation */
+[data-testid="button-context"]:active,
+[data-testid="button-context"].ctx-pressed {
+  transform: translateY(0) scale(0.95);
+  transition: all 0.1s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* Disabled State */
+[data-testid="button-context"]:disabled {
+  background: var(--ctx-purple-50);
+  color: var(--ctx-purple-300);
+  border-color: var(--ctx-purple-200);
+  cursor: not-allowed;
+  opacity: 0.6;
+  box-shadow: none;
+  transform: none;
+}
+
+/* Loading State Spinner */
+[data-testid="button-context"] .ctx-spinner {
+  animation: ctx-spin 1s linear infinite;
+}
+
+@keyframes ctx-spin {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+/* Enhanced Pulse Animation for Active State */
+[data-testid="button-context"].ctx-active {
+  animation: ctx-pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+}
+
+@keyframes ctx-pulse {
+  0%, 100% {
+    box-shadow: 
+      0 0 0 1px rgba(147, 51, 234, 0.3),
+      0 4px 12px -2px rgba(147, 51, 234, 0.4),
+      0 0 20px -5px rgba(147, 51, 234, 0.3);
+  }
+  50% {
+    box-shadow: 
+      0 0 0 1px rgba(147, 51, 234, 0.5),
+      0 4px 12px -2px rgba(147, 51, 234, 0.6),
+      0 0 25px -5px rgba(147, 51, 234, 0.5);
+  }
+}
+
+/* Background Glow Effect */
+[data-testid="button-context"].ctx-active::before {
+  content: '';
+  position: absolute;
+  inset: -2px;
+  background: linear-gradient(135deg, var(--ctx-purple-400), var(--ctx-purple-600));
+  border-radius: inherit;
+  z-index: -1;
+  opacity: 0.7;
+  filter: blur(8px);
+  animation: ctx-glow-pulse 2s ease-in-out infinite alternate;
+}
+
+@keyframes ctx-glow-pulse {
+  from {
+    opacity: 0.5;
+    filter: blur(6px);
+  }
+  to {
+    opacity: 0.8;
+    filter: blur(10px);
+  }
+}
+
+/* Focus States for Accessibility */
+[data-testid="button-context"]:focus-visible {
+  outline: 2px solid var(--ctx-purple-500);
+  outline-offset: 2px;
+}
+
+/* Mobile Touch Enhancements */
+@media (max-width: 768px) {
+  [data-testid="button-context"] {
+    min-width: 52px;
+    min-height: 40px;
+    font-size: 0.875rem;
+  }
+  
+  /* Enhanced touch feedback */
+  [data-testid="button-context"]:active {
+    transform: scale(0.92);
+  }
+}
+
+/* Reduced Motion Support */
+@media (prefers-reduced-motion: reduce) {
+  [data-testid="button-context"],
+  [data-testid="button-context"].ctx-active,
+  [data-testid="button-context"]::before {
+    animation: none;
+    transition: none;
+  }
+  
+  [data-testid="button-context"]:hover,
+  [data-testid="button-context"]:active {
+    transform: none;
+  }
+}
+
+/* High Contrast Mode Support */
+@media (prefers-contrast: high) {
+  [data-testid="button-context"] {
+    border-width: 2px;
+  }
+  
+  [data-testid="button-context"].ctx-active {
+    background: var(--ctx-purple-800);
+    border-color: var(--ctx-purple-900);
+  }
+}

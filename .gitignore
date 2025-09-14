@@ -1,0 +1,21 @@
+node_modules
+dist
+.DS_Store
+server/public
+vite.config.ts.*
+*.tar.gz
+
+# Config files and logs that shouldn't be committed
+.config/
+.wrangler/
+*.log
+chromium/
+
+# IDE and editor files
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# OS generated files
+Thumbs.db
