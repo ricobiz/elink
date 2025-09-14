@@ -1,0 +1,30 @@
+
+--- 2025-09-06T15:36:07.975Z debug
+🪵  Writing logs to "/home/runner/workspace/.config/.wrangler/logs/wrangler-2025-09-06_15-36-07_734.log"
+---
+
+--- 2025-09-06T15:36:07.975Z debug
+Metrics dispatcher: Posting data {"deviceId":"68948afc-595c-4c4d-8e12-41e719670161","event":"wrangler command started","timestamp":1757172967975,"properties":{"amplitude_session_id":1757172967971,"amplitude_event_id":0,"wranglerVersion":"4.33.1","osPlatform":"Linux","osVersion":"#1-NixOS SMP PREEMPT_DYNAMIC Tue Jan  1 00:00:00 UTC 1980","nodeVersion":20,"packageManager":"npm","isFirstUsage":false,"configFileType":"toml","isCI":false,"isPagesCI":false,"isWorkersCI":false,"isInteractive":false,"hasAssets":false,"argsUsed":["apiToken"],"argsCombination":"apiToken","command":"wrangler auth login","args":{"apiToken":true}}}
+---
+
+--- 2025-09-06T15:36:08.014Z log
+
+---
+
+--- 2025-09-06T15:36:08.104Z error
+✘ [ERROR] Unknown arguments: api-token, apiToken, auth, login
+
+
+---
+
+--- 2025-09-06T15:36:08.118Z debug
+.env file not found at "/home/runner/workspace/.env". Continuing... For more details, refer to https://developers.cloudflare.com/workers/wrangler/system-environment-variables/
+---
+
+--- 2025-09-06T15:36:08.118Z debug
+.env file not found at "/home/runner/workspace/.env.local". Continuing... For more details, refer to https://developers.cloudflare.com/workers/wrangler/system-environment-variables/
+---
+
+--- 2025-09-06T15:36:08.154Z debug
+Metrics dispatcher: Posting data {"deviceId":"68948afc-595c-4c4d-8e12-41e719670161","event":"wrangler command errored","timestamp":1757172968154,"properties":{"amplitude_session_id":1757172967971,"amplitude_event_id":1,"wranglerVersion":"4.33.1","osPlatform":"Linux","osVersion":"#1-NixOS SMP PREEMPT_DYNAMIC Tue Jan  1 00:00:00 UTC 1980","nodeVersion":20,"packageManager":"npm","isFirstUsage":false,"configFileType":"toml","isCI":false,"isPagesCI":false,"isWorkersCI":false,"isInteractive":false,"hasAssets":false,"argsUsed":["apiToken"],"argsCombination":"apiToken","command":"wrangler auth login","args":{"apiToken":true},"durationMs":212,"durationSeconds":0.212,"durationMinutes":0.003533333333333333,"errorType":"CommandLineArgsError","errorMessage":"yargs validation error"}}
+---

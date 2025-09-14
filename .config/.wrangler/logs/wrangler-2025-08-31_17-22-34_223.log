@@ -1,0 +1,26 @@
+
+--- 2025-08-31T17:22:34.444Z debug
+🪵  Writing logs to "/home/runner/workspace/.config/.wrangler/logs/wrangler-2025-08-31_17-22-34_223.log"
+---
+
+--- 2025-08-31T17:22:34.444Z debug
+Metrics dispatcher: Posting data {"deviceId":"68948afc-595c-4c4d-8e12-41e719670161","event":"wrangler command started","timestamp":1756660954444,"properties":{"amplitude_session_id":1756660954440,"amplitude_event_id":0,"wranglerVersion":"4.33.1","osPlatform":"Linux","osVersion":"#1-NixOS SMP PREEMPT_DYNAMIC Tue Jan  1 00:00:00 UTC 1980","nodeVersion":20,"packageManager":"npm","isFirstUsage":true,"configFileType":"toml","isCI":false,"isPagesCI":false,"isWorkersCI":false,"isInteractive":false,"hasAssets":false,"argsUsed":["v","version"],"argsCombination":"v, version","command":"wrangler ","args":{"version":true,"v":true}}}
+---
+
+--- 2025-08-31T17:22:34.464Z debug
+.env file not found at "/home/runner/workspace/.env". Continuing... For more details, refer to https://developers.cloudflare.com/workers/wrangler/system-environment-variables/
+---
+
+--- 2025-08-31T17:22:34.464Z debug
+.env file not found at "/home/runner/workspace/.env.local". Continuing... For more details, refer to https://developers.cloudflare.com/workers/wrangler/system-environment-variables/
+---
+
+--- 2025-08-31T17:22:34.499Z log
+
+ ⛅️ wrangler 4.33.1
+───────────────────
+---
+
+--- 2025-08-31T17:22:34.504Z debug
+Metrics dispatcher: Posting data {"deviceId":"68948afc-595c-4c4d-8e12-41e719670161","event":"wrangler command completed","timestamp":1756660954503,"properties":{"amplitude_session_id":1756660954440,"amplitude_event_id":1,"wranglerVersion":"4.33.1","osPlatform":"Linux","osVersion":"#1-NixOS SMP PREEMPT_DYNAMIC Tue Jan  1 00:00:00 UTC 1980","nodeVersion":20,"packageManager":"npm","isFirstUsage":false,"configFileType":"toml","isCI":false,"isPagesCI":false,"isWorkersCI":false,"isInteractive":false,"hasAssets":false,"argsUsed":["v","version"],"argsCombination":"v, version","command":"wrangler ","args":{"version":true,"v":true},"durationMs":86,"durationSeconds":0.086,"durationMinutes":0.0014333333333333331}}
+---

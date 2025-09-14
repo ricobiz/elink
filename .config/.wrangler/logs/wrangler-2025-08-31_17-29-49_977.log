@@ -1,0 +1,75 @@
+
+--- 2025-08-31T17:29:50.224Z debug
+🪵  Writing logs to "/home/runner/workspace/.config/.wrangler/logs/wrangler-2025-08-31_17-29-49_977.log"
+---
+
+--- 2025-08-31T17:29:50.224Z debug
+Metrics dispatcher: Posting data {"deviceId":"68948afc-595c-4c4d-8e12-41e719670161","event":"wrangler command started","timestamp":1756661390224,"properties":{"amplitude_session_id":1756661390221,"amplitude_event_id":0,"wranglerVersion":"4.33.1","osPlatform":"Linux","osVersion":"#1-NixOS SMP PREEMPT_DYNAMIC Tue Jan  1 00:00:00 UTC 1980","nodeVersion":20,"packageManager":"npm","isFirstUsage":false,"configFileType":"toml","isCI":false,"isPagesCI":false,"isWorkersCI":false,"isInteractive":false,"hasAssets":false,"argsUsed":["dryRun"],"argsCombination":"dryRun","command":"wrangler deploy","args":{"dryRun":true,"noBundle":false,"latest":false,"keepVars":false,"xAutoCreate":true}}}
+---
+
+--- 2025-08-31T17:29:50.243Z debug
+.env file not found at "/home/runner/workspace/.env". Continuing... For more details, refer to https://developers.cloudflare.com/workers/wrangler/system-environment-variables/
+---
+
+--- 2025-08-31T17:29:50.243Z debug
+.env file not found at "/home/runner/workspace/.env.local". Continuing... For more details, refer to https://developers.cloudflare.com/workers/wrangler/system-environment-variables/
+---
+
+--- 2025-08-31T17:29:50.319Z log
+
+ ⛅️ wrangler 4.33.1
+───────────────────
+---
+
+--- 2025-08-31T17:29:50.393Z log
+Total Upload: 19.15 KiB / gzip: 4.06 KiB
+---
+
+--- 2025-08-31T17:29:50.395Z log
+Your Worker has access to the following bindings:
+---
+
+--- 2025-08-31T17:29:50.395Z log
+Binding                  Resource                
+---
+
+--- 2025-08-31T17:29:50.395Z log
+env.SERVICE_NAME         Environment Variable    
+  "eiroslink"
+---
+
+--- 2025-08-31T17:29:50.395Z log
+env.SERVICE_VERSION      Environment Variable    
+  "v3.1"
+---
+
+--- 2025-08-31T17:29:50.396Z log
+env.PROXY_ORIGIN         Environment Variable    
+  "https://react-node-cloudflare-gq2tdbf..."
+---
+
+--- 2025-08-31T17:29:50.396Z log
+env.RL_BUCKET_PER_MIN    Environment Variable    
+  "120"
+---
+
+--- 2025-08-31T17:29:50.396Z log
+env.CORS_ALLOW_ORIGIN    Environment Variable    
+  "https://eiroslink.com, https://eiros...."
+---
+
+--- 2025-08-31T17:29:50.396Z log
+
+---
+
+--- 2025-08-31T17:29:50.398Z log
+--dry-run: exiting now.
+---
+
+--- 2025-08-31T17:29:50.399Z debug
+Metrics dispatcher: Posting data {"deviceId":"68948afc-595c-4c4d-8e12-41e719670161","event":"deploy worker script","timestamp":1756661390399,"properties":{"category":"Workers","wranglerVersion":"4.33.1","os":"linux:x64","usesTypeScript":false,"durationMs":37}}
+---
+
+--- 2025-08-31T17:29:50.404Z debug
+Metrics dispatcher: Posting data {"deviceId":"68948afc-595c-4c4d-8e12-41e719670161","event":"wrangler command completed","timestamp":1756661390404,"properties":{"amplitude_session_id":1756661390221,"amplitude_event_id":1,"wranglerVersion":"4.33.1","osPlatform":"Linux","osVersion":"#1-NixOS SMP PREEMPT_DYNAMIC Tue Jan  1 00:00:00 UTC 1980","nodeVersion":20,"packageManager":"npm","isFirstUsage":false,"configFileType":"toml","isCI":false,"isPagesCI":false,"isWorkersCI":false,"isInteractive":false,"hasAssets":false,"argsUsed":["dryRun"],"argsCombination":"dryRun","command":"wrangler deploy","args":{"dryRun":true,"noBundle":false,"latest":false,"keepVars":false,"xAutoCreate":true},"durationMs":216,"durationSeconds":0.216,"durationMinutes":0.0036}}
+---

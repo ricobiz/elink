@@ -1,0 +1,54 @@
+
+--- 2025-08-31T17:22:03.582Z debug
+🪵  Writing logs to "/home/runner/workspace/.config/.wrangler/logs/wrangler-2025-08-31_17-21-51_418.log"
+---
+
+--- 2025-08-31T17:22:03.582Z debug
+Failed to load .env file ".env": Error: ENOENT: no such file or directory, open '.env'
+    at Object.openSync (node:fs:582:18)
+    at Object.readFileSync (node:fs:461:35)
+    at tryLoadDotEnv (/nix/store/5drw95c0mcnziyvxyx9rzk1f42mldiq3-wrangler-3.34.2/lib/node_modules/wrangler/wrangler-dist/cli.js:124353:72)
+    at loadDotEnv (/nix/store/5drw95c0mcnziyvxyx9rzk1f42mldiq3-wrangler-3.34.2/lib/node_modules/wrangler/wrangler-dist/cli.js:124362:12)
+    at /nix/store/5drw95c0mcnziyvxyx9rzk1f42mldiq3-wrangler-3.34.2/lib/node_modules/wrangler/wrangler-dist/cli.js:164011:20
+    at /nix/store/5drw95c0mcnziyvxyx9rzk1f42mldiq3-wrangler-3.34.2/lib/node_modules/wrangler/wrangler-dist/cli.js:131396:16
+    at maybeAsyncResult (/nix/store/5drw95c0mcnziyvxyx9rzk1f42mldiq3-wrangler-3.34.2/lib/node_modules/wrangler/wrangler-dist/cli.js:129617:44)
+    at /nix/store/5drw95c0mcnziyvxyx9rzk1f42mldiq3-wrangler-3.34.2/lib/node_modules/wrangler/wrangler-dist/cli.js:131395:14
+    at /nix/store/5drw95c0mcnziyvxyx9rzk1f42mldiq3-wrangler-3.34.2/lib/node_modules/wrangler/wrangler-dist/cli.js:129604:22
+    at Array.reduce (<anonymous>) {
+  errno: -2,
+  code: 'ENOENT',
+  syscall: 'open',
+  path: '.env'
+}
+---
+
+--- 2025-08-31T17:22:04.289Z log
+ ⛅️ wrangler 3.34.2 (update available [32m4.33.1[39m)
+[38;2;255;136;0m-------------------------------------------------------[39m
+---
+
+--- 2025-08-31T17:22:04.593Z warn
+[33m▲ [43;33m[[43;30mWARNING[43;33m][0m [1mThe version of Wrangler you are using is now out-of-date.[0m
+
+  Please update to the latest version to prevent critical errors.
+  Run `npm install --save-dev wrangler@4` to update to the latest version.
+  After installation, run Wrangler with `npx wrangler`.
+
+
+---
+
+--- 2025-08-31T17:22:04.609Z debug
+-- START CF API REQUEST: GET https://api.cloudflare.com/client/v4/memberships?page=1
+---
+
+--- 2025-08-31T17:22:04.609Z debug
+HEADERS: omitted; set WRANGLER_LOG_SANITIZE=false to include sanitized data
+---
+
+--- 2025-08-31T17:22:04.609Z debug
+INIT: omitted; set WRANGLER_LOG_SANITIZE=false to include sanitized data
+---
+
+--- 2025-08-31T17:22:04.609Z debug
+-- END CF API REQUEST
+---

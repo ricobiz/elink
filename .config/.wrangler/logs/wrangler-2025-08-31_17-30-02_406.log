@@ -1,0 +1,22 @@
+
+--- 2025-08-31T17:30:02.627Z debug
+🪵  Writing logs to "/home/runner/workspace/.config/.wrangler/logs/wrangler-2025-08-31_17-30-02_406.log"
+---
+
+--- 2025-08-31T17:30:02.627Z debug
+Metrics dispatcher: Posting data {"deviceId":"68948afc-595c-4c4d-8e12-41e719670161","event":"wrangler command started","timestamp":1756661402626,"properties":{"amplitude_session_id":1756661402622,"amplitude_event_id":0,"wranglerVersion":"4.33.1","osPlatform":"Linux","osVersion":"#1-NixOS SMP PREEMPT_DYNAMIC Tue Jan  1 00:00:00 UTC 1980","nodeVersion":20,"packageManager":"npm","isFirstUsage":false,"configFileType":"toml","isCI":false,"isPagesCI":false,"isWorkersCI":false,"isInteractive":false,"hasAssets":false,"argsUsed":["force"],"argsCombination":"force","command":"wrangler deploy","args":{"force":true,"noBundle":false,"latest":false,"keepVars":false,"xAutoCreate":true}}}
+---
+
+--- 2025-08-31T17:30:02.645Z log
+
+---
+
+--- 2025-08-31T17:30:02.744Z error
+✘ [ERROR] Unknown argument: force
+
+
+---
+
+--- 2025-08-31T17:30:02.839Z debug
+Metrics dispatcher: Posting data {"deviceId":"68948afc-595c-4c4d-8e12-41e719670161","event":"wrangler command errored","timestamp":1756661402839,"properties":{"amplitude_session_id":1756661402622,"amplitude_event_id":1,"wranglerVersion":"4.33.1","osPlatform":"Linux","osVersion":"#1-NixOS SMP PREEMPT_DYNAMIC Tue Jan  1 00:00:00 UTC 1980","nodeVersion":20,"packageManager":"npm","isFirstUsage":false,"configFileType":"toml","isCI":false,"isPagesCI":false,"isWorkersCI":false,"isInteractive":false,"hasAssets":false,"argsUsed":["force"],"argsCombination":"force","command":"wrangler deploy","args":{"force":true,"noBundle":false,"latest":false,"keepVars":false,"xAutoCreate":true},"durationMs":246,"durationSeconds":0.246,"durationMinutes":0.0041,"errorType":"CommandLineArgsError","errorMessage":"yargs validation error"}}
+---

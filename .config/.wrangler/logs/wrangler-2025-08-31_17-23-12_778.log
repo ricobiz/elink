@@ -1,0 +1,71 @@
+
+--- 2025-08-31T17:23:12.987Z debug
+🪵  Writing logs to "/home/runner/workspace/.config/.wrangler/logs/wrangler-2025-08-31_17-23-12_778.log"
+---
+
+--- 2025-08-31T17:23:12.987Z debug
+Metrics dispatcher: Posting data {"deviceId":"68948afc-595c-4c4d-8e12-41e719670161","event":"wrangler command started","timestamp":1756660992986,"properties":{"amplitude_session_id":1756660992983,"amplitude_event_id":0,"wranglerVersion":"4.33.1","osPlatform":"Linux","osVersion":"#1-NixOS SMP PREEMPT_DYNAMIC Tue Jan  1 00:00:00 UTC 1980","nodeVersion":20,"packageManager":"npm","isFirstUsage":false,"configFileType":"toml","isCI":false,"isPagesCI":false,"isWorkersCI":false,"isInteractive":false,"hasAssets":false,"argsUsed":[],"argsCombination":"","command":"wrangler kv namespace list","args":{}}}
+---
+
+--- 2025-08-31T17:23:13.002Z debug
+.env file not found at "/home/runner/workspace/.env". Continuing... For more details, refer to https://developers.cloudflare.com/workers/wrangler/system-environment-variables/
+---
+
+--- 2025-08-31T17:23:13.002Z debug
+.env file not found at "/home/runner/workspace/.env.local". Continuing... For more details, refer to https://developers.cloudflare.com/workers/wrangler/system-environment-variables/
+---
+
+--- 2025-08-31T17:23:13.045Z debug
+-- START CF API REQUEST: GET https://api.cloudflare.com/client/v4/memberships
+---
+
+--- 2025-08-31T17:23:13.045Z debug
+QUERY STRING: omitted; set WRANGLER_LOG_SANITIZE=false to include sanitized data
+---
+
+--- 2025-08-31T17:23:13.045Z debug
+HEADERS: omitted; set WRANGLER_LOG_SANITIZE=false to include sanitized data
+---
+
+--- 2025-08-31T17:23:13.045Z debug
+INIT: omitted; set WRANGLER_LOG_SANITIZE=false to include sanitized data
+---
+
+--- 2025-08-31T17:23:13.045Z debug
+-- END CF API REQUEST
+---
+
+--- 2025-08-31T17:23:13.227Z debug
+-- START CF API RESPONSE: Bad Request 400
+---
+
+--- 2025-08-31T17:23:13.228Z debug
+HEADERS: omitted; set WRANGLER_LOG_SANITIZE=false to include sanitized data
+---
+
+--- 2025-08-31T17:23:13.228Z debug
+RESPONSE: omitted; set WRANGLER_LOG_SANITIZE=false to include sanitized data
+---
+
+--- 2025-08-31T17:23:13.228Z debug
+-- END CF API RESPONSE
+---
+
+--- 2025-08-31T17:23:13.231Z log
+
+---
+
+--- 2025-08-31T17:23:13.322Z log
+✘ [ERROR] A request to the Cloudflare API (/memberships) failed.
+
+  Unable to authenticate request [code: 10001]
+  
+  If you think this is a bug, please open an issue at:
+  https://github.com/cloudflare/workers-sdk/issues/new/choose
+
+
+---
+
+--- 2025-08-31T17:23:13.325Z debug
+Metrics dispatcher: Posting data {"deviceId":"68948afc-595c-4c4d-8e12-41e719670161","event":"wrangler command errored","timestamp":1756660993325,"properties":{"amplitude_session_id":1756660992983,"amplitude_event_id":1,"wranglerVersion":"4.33.1","osPlatform":"Linux","osVersion":"#1-NixOS SMP PREEMPT_DYNAMIC Tue Jan  1 00:00:00 UTC 1980","nodeVersion":20,"packageManager":"npm","isFirstUsage":false,"configFileType":"toml","isCI":false,"isPagesCI":false,"isWorkersCI":false,"isInteractive":false,"hasAssets":false,"argsUsed":[],"argsCombination":"","command":"wrangler kv namespace list","args":{},"durationMs":365,"durationSeconds":0.365,"durationMinutes":0.006083333333333333,"errorType":"APIError"}}
+---

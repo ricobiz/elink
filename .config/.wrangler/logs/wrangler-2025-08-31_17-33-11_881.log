@@ -1,0 +1,22 @@
+
+--- 2025-08-31T17:33:12.149Z debug
+🪵  Writing logs to "/home/runner/workspace/.config/.wrangler/logs/wrangler-2025-08-31_17-33-11_881.log"
+---
+
+--- 2025-08-31T17:33:12.149Z debug
+Metrics dispatcher: Posting data {"deviceId":"68948afc-595c-4c4d-8e12-41e719670161","event":"wrangler command started","timestamp":1756661592149,"properties":{"amplitude_session_id":1756661592145,"amplitude_event_id":0,"wranglerVersion":"4.33.1","osPlatform":"Linux","osVersion":"#1-NixOS SMP PREEMPT_DYNAMIC Tue Jan  1 00:00:00 UTC 1980","nodeVersion":20,"packageManager":"npm","isFirstUsage":false,"configFileType":"toml","isCI":false,"isPagesCI":false,"isWorkersCI":false,"isInteractive":false,"hasAssets":false,"argsUsed":["type"],"argsCombination":"type","command":"wrangler init","args":{"type":"<REDACTED>","delegateC3":true,"c3":true,"name":"<REDACTED>"}}}
+---
+
+--- 2025-08-31T17:33:12.166Z log
+
+---
+
+--- 2025-08-31T17:33:12.228Z error
+✘ [ERROR] Unknown argument: type
+
+
+---
+
+--- 2025-08-31T17:33:12.264Z debug
+Metrics dispatcher: Posting data {"deviceId":"68948afc-595c-4c4d-8e12-41e719670161","event":"wrangler command errored","timestamp":1756661592264,"properties":{"amplitude_session_id":1756661592145,"amplitude_event_id":1,"wranglerVersion":"4.33.1","osPlatform":"Linux","osVersion":"#1-NixOS SMP PREEMPT_DYNAMIC Tue Jan  1 00:00:00 UTC 1980","nodeVersion":20,"packageManager":"npm","isFirstUsage":false,"configFileType":"toml","isCI":false,"isPagesCI":false,"isWorkersCI":false,"isInteractive":false,"hasAssets":false,"argsUsed":["type"],"argsCombination":"type","command":"wrangler init","args":{"type":"<REDACTED>","delegateC3":true,"c3":true,"name":"<REDACTED>"},"durationMs":148,"durationSeconds":0.148,"durationMinutes":0.0024666666666666665,"errorType":"CommandLineArgsError","errorMessage":"yargs validation error"}}
+---
